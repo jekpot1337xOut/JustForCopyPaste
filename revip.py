@@ -15,7 +15,7 @@ def hackertarget(ip):
 	global proxy_cycle
 	global proxy
 	try:
-		text = requests.get("http://api.hackertarget.com/reverseiplookup/?q="+ip, headers={"User-agent":"Linuz Mozilla 5/0"}, proxies=proxy, timeout=15).text
+		text = requests.get("https://api.scrapestack.com/scrape?access_key=6c1b98133d719f0ab4ff6a6136c41b99&url=https://api.hackertarget.com/reverseiplookup/?q="+ip, headers={"User-agent":"Linuz Mozilla 5/0"}, proxies=proxy, timeout=15).text
 		if "error check your search parameter" in text:
 			pass
 		elif "API count exceeded - Increase Quota with Membership" in text:
